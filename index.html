@@ -3,23 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Navigation Menu</title>
+  <title>Stopwatch</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="navbar" id="navbar">
-    <ul class="menu">
-      <li class="menu-item"><a href="#home">Home</a></li>
-      <li class="menu-item"><a href="#about">About</a></li>
-      <li class="menu-item"><a href="#services">Services</a></li>
-      <li class="menu-item"><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="content">
-    <section id="home"><h1>Home</h1></section>
-    <section id="about"><h1>About</h1></section>
-    <section id="services"><h1>Services</h1></section>
-    <section id="contact"><h1>Contact</h1></section>
+  <div class="stopwatch">
+    <h1>Stopwatch</h1>
+    <div class="time-display" id="time-display">00:00:00.000</div>
+    <div class="controls">
+      <button id="start-btn">Start</button>
+      <button id="pause-btn" disabled>Pause</button>
+      <button id="reset-btn" disabled>Reset</button>
+      <button id="lap-btn" disabled>Lap</button>
+    </div>
+    <ul class="laps" id="laps"></ul>
   </div>
   <script src="script.js"></script>
 </body>

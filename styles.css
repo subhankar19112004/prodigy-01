@@ -1,67 +1,72 @@
-/* General Reset */
-body, ul {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
+body {
     font-family: Arial, sans-serif;
-  }
-  
-  /* Navbar Styles */
-  .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  }
-  
-  .navbar.scrolled {
-    background-color: #333;
-  }
-  
-  .menu {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 10px 0;
-  }
-  
-  .menu-item {
-    margin: 0 15px;
-  }
-  
-  .menu-item a {
-    text-decoration: none;
-    color: white;
-    padding: 5px 10px;
-    transition: color 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .menu-item a:hover {
-    color: #333;
-    background-color: #fff;
-    border-radius: 4px;
-  }
-  
-  /* Content Sections */
-  .content {
-    padding-top: 60px; /* Space for the fixed navbar */
-  }
-  
-  section {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    border-bottom: 1px solid #ccc;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
   }
   
-  section h1 {
+  .stopwatch {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .time-display {
     font-size: 2rem;
+    margin: 20px 0;
+    color: #222;
+    font-family: monospace;
+  }
+  
+  .controls button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .controls button:not(:disabled) {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .controls button:not(:disabled):hover {
+    background-color: #0056b3;
+  }
+  
+  .laps {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0;
+    max-height: 150px;
+    overflow-y: auto;
+    border-top: 1px solid #ccc;
+  }
+  
+  .laps li {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+    font-family: monospace;
+    color: #555;
   }
   
